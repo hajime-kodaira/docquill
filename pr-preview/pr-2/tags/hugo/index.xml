@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on docquill example</title><link>https://hajime-kodaira.github.io/docquill/pr-preview/pr-2/tags/hugo/</link><description>Recent content in Hugo on docquill example</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0900</lastBuildDate><atom:link href="https://hajime-kodaira.github.io/docquill/pr-preview/pr-2/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>AsciiDocでブログを始める</title><link>https://hajime-kodaira.github.io/docquill/pr-preview/pr-2/posts/getting-started/</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0900</pubDate><guid>https://hajime-kodaira.github.io/docquill/pr-preview/pr-2/posts/getting-started/</guid><description>&lt;div class="sect1">
+&lt;h2 id="_はじめに">&lt;a class="anchor" href="#_はじめに">&lt;/a>1. はじめに&lt;/h2>
+&lt;div class="sectionbody">
+&lt;div class="paragraph">
+&lt;p>このブログはAsciiDocで書かれています。
+Markdownと比べて、以下のような利点があります。&lt;/p>
+&lt;/div>
+&lt;div class="ulist">
+&lt;ul>
+&lt;li>
+&lt;p>テーブルが書きやすい&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>admonition（NOTE, TIP, WARNING等）が標準サポート&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>includeディレクティブでファイル分割が可能&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div class="sect1">
+&lt;h2 id="_コードブロックの例">&lt;a class="anchor" href="#_コードブロックの例">&lt;/a>2. コードブロックの例&lt;/h2>
+&lt;div class="sectionbody">
+&lt;div class="listingblock">
+&lt;div class="content">
+&lt;pre class="rouge highlight">&lt;code data-lang="go">&lt;span class="k">package&lt;/span> &lt;span class="n">main&lt;/span>
+
+&lt;span class="k">import&lt;/span> &lt;span class="s">&amp;#34;fmt&amp;#34;&lt;/span>
+
+&lt;span class="k">func&lt;/span> &lt;span class="n">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+ &lt;span class="n">fmt&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Hello, AsciiDoc!&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div class="sect1">
+&lt;h2 id="_admonitionの例">&lt;a class="anchor" href="#_admonitionの例">&lt;/a>3. Admonitionの例&lt;/h2>
+&lt;div class="sectionbody">
+&lt;div class="admonitionblock note">
+&lt;table>
+&lt;tbody>&lt;tr>
+&lt;td class="icon">
+&lt;div class="title">Note&lt;/div>
+&lt;/td>
+&lt;td class="content">
+AsciiDocではNOTE, TIP, IMPORTANT, WARNING, CAUTIONが使えます。
+&lt;/td>
+&lt;/tr>
+&lt;/tbody>&lt;/table>
+&lt;/div>
+&lt;div class="admonitionblock tip">
+&lt;table>
+&lt;tbody>&lt;tr>
+&lt;td class="icon">
+&lt;div class="title">Tip&lt;/div>
+&lt;/td>
+&lt;td class="content">
+&lt;code>source-highlighter&lt;/code> に &lt;code>rouge&lt;/code> を指定するとシンタックスハイライトが有効になります。
+&lt;/td>
+&lt;/tr>
+&lt;/tbody>&lt;/table>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div class="sect1">
+&lt;h2 id="_テーブルの例">&lt;a class="anchor" href="#_テーブルの例">&lt;/a>4. テーブルの例&lt;/h2>
+&lt;div class="sectionbody">
+&lt;table class="tableblock frame-all grid-all stretch">
+&lt;colgroup>
+&lt;col style="width: 16.6666%;"/>
+&lt;col style="width: 33.3333%;"/>
+&lt;col style="width: 50.0001%;"/>
+&lt;/colgroup>
+&lt;thead>
+&lt;tr>
+&lt;th class="tableblock halign-left valign-top">項目&lt;/th>
+&lt;th class="tableblock halign-left valign-top">説明&lt;/th>
+&lt;th class="tableblock halign-left valign-top">備考&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td class="tableblock halign-left valign-top">&lt;p class="tableblock">Hugo&lt;/p>&lt;/td>
+&lt;td class="tableblock halign-left valign-top">&lt;p class="tableblock">Go製の静的サイトジェネレーター&lt;/p>&lt;/td>
+&lt;td class="tableblock halign-left valign-top">&lt;p class="tableblock">ビルド速度が非常に速い&lt;/p>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td class="tableblock halign-left valign-top">&lt;p class="tableblock">AsciiDoc&lt;/p>&lt;/td>
+&lt;td class="tableblock halign-left valign-top">&lt;p class="tableblock">構造化文書フォーマット&lt;/p>&lt;/td>
+&lt;td class="tableblock halign-left valign-top">&lt;p class="tableblock">技術文書に最適&lt;/p>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>
