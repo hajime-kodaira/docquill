@@ -1,0 +1,39 @@
+baseURL = "http://localhost:1313/"
+languageCode = "ja"
+title = "docquill example"
+
+[params]
+  description = "docquillテーマのデモサイト"
+  author = "docquill"
+  dateFormat = "2006-01-02"
+
+[module]
+  [[module.imports]]
+    path = "github.com/hajime-kodaira/docquill"
+
+[markup.asciidocExt]
+  backend = "html5"
+  noHeaderOrFooter = true
+  safeMode = "unsafe"
+  workingFolderCurrent = true
+
+  [markup.asciidocExt.attributes]
+    "source-highlighter" = "rouge"
+    "rouge-style" = "monokai"
+    sectanchors = ""
+    sectnums = ""
+    "imagesdir" = "/images"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+[pagination]
+  pagerSize = 10
+
+[security.exec]
+  allow = ['^(dart-)?sass(-embedded)?$', '^go$', '^git$', '^npx$', '^postcss$', '^tailwindcss$', '^asciidoctor$']

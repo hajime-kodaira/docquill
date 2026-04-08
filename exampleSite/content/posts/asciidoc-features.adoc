@@ -1,0 +1,80 @@
+---
+title: "AsciiDoc機能デモ"
+date: 2025-01-15T00:00:00+09:00
+draft: false
+categories: ["リファレンス"]
+tags: ["asciidoc", "demo"]
+description: "docquillテーマで使えるAsciiDoc要素のデモ"
+---
+
+= AsciiDoc機能デモ
+
+docquillテーマがAsciidoctorの主要な出力要素にどう対応しているかを確認するためのデモ記事です。
+
+== Admonitionの全種類
+
+NOTE: ノートです。補足情報を表します。
+
+TIP: ヒントです。便利な使い方を示します。
+
+IMPORTANT: 重要事項です。読者に強く伝えたい内容です。
+
+WARNING: 警告です。注意を喚起します。
+
+CAUTION: 注意です。慎重な取り扱いが必要です。
+
+== 引用ブロック
+
+[quote, Donald E. Knuth, The Art of Computer Programming]
+____
+Premature optimization is the root of all evil.
+____
+
+== ソースコードブロック
+
+.Pythonの例
+[source,python]
+----
+def fibonacci(n):
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a + b
+    return a
+----
+
+.Bashの例
+[source,bash]
+----
+#!/bin/bash
+for i in {1..5}; do
+  echo "iteration $i"
+done
+----
+
+== リスト
+
+=== 箇条書き
+
+* レベル1の項目
+** レベル2の項目
+*** レベル3の項目
+* 別の項目
+
+=== 番号付きリスト
+
+. 最初のステップ
+. 二番目のステップ
+. 三番目のステップ
+
+== インライン要素
+
+これは `インラインコード` の例です。
+*強調* と _斜体_ も使えます。
+リンクは https://gohugo.io[Hugo公式サイト] のように書きます。
+
+== サイドバー
+
+****
+これはサイドバーブロックです。
+本文から少し離れた補足情報に使います。
+****

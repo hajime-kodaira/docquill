@@ -1,0 +1,53 @@
+---
+title: "AsciiDocでブログを始める"
+date: 2025-01-01T00:00:00+09:00
+draft: false
+categories: ["ブログ"]
+tags: ["asciidoc", "hugo", "github-pages"]
+description: "AsciiDocとHugoでテックブログを構築する方法"
+---
+
+= AsciiDocでブログを始める
+
+== はじめに
+
+このブログはAsciiDocで書かれています。
+Markdownと比べて、以下のような利点があります。
+
+* テーブルが書きやすい
+* admonition（NOTE, TIP, WARNING等）が標準サポート
+* includeディレクティブでファイル分割が可能
+
+== コードブロックの例
+
+[source,go]
+----
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, AsciiDoc!")
+}
+----
+
+== Admonitionの例
+
+NOTE: AsciiDocではNOTE, TIP, IMPORTANT, WARNING, CAUTIONが使えます。
+
+TIP: `source-highlighter` に `rouge` を指定するとシンタックスハイライトが有効になります。
+
+== テーブルの例
+
+[cols="1,2,3", options="header"]
+|===
+| 項目 | 説明 | 備考
+
+| Hugo
+| Go製の静的サイトジェネレーター
+| ビルド速度が非常に速い
+
+| AsciiDoc
+| 構造化文書フォーマット
+| 技術文書に最適
+|===

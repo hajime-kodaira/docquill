@@ -1,0 +1,59 @@
+# docquill — テーマのデフォルト設定
+# コンテンツリポジトリ側で上書きされる想定
+
+baseURL = "https://hajime-kodaira.github.io/docquill/"
+languageCode = "ja"
+title = "docquill"
+
+# =====================
+# AsciiDoc設定
+# =====================
+[markup.asciidocExt]
+  backend = "html5"
+  noHeaderOrFooter = true
+  safeMode = "unsafe"
+  workingFolderCurrent = true
+
+  [markup.asciidocExt.attributes]
+    "source-highlighter" = "rouge"
+    "rouge-style" = "monokai"
+    sectanchors = ""
+    sectnums = ""
+    "imagesdir" = "/images"
+
+# コードハイライト (Markdown併用時)
+[markup.highlight]
+  codeFences = true
+  lineNos = false
+  style = "monokai"
+
+# =====================
+# タクソノミー
+# =====================
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+# =====================
+# サイト情報
+# =====================
+[params]
+  description = "AsciiDocで書くテックブログ"
+  author = "hajime-kodaira"
+  dateFormat = "2006-01-02"
+
+# =====================
+# 出力設定
+# =====================
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+[pagination]
+  pagerSize = 10
+
+# =====================
+# セキュリティ: AsciiDoctor 実行を許可
+# =====================
+[security.exec]
+  allow = ['^(dart-)?sass(-embedded)?$', '^go$', '^git$', '^npx$', '^postcss$', '^tailwindcss$', '^asciidoctor$']

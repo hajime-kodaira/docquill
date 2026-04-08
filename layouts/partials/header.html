@@ -1,0 +1,18 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="site-title" href="{{ "/" | absURL }}">{{ .Site.Title }}</a>
+    <nav class="site-nav">
+      <a href="{{ "/posts/" | absURL }}">Posts</a>
+      <a href="{{ "/tags/" | absURL }}">Tags</a>
+      <a href="{{ "/categories/" | absURL }}">Categories</a>
+    </nav>
+    <div id="search" class="site-search"></div>
+  </div>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      if (typeof PagefindUI !== 'undefined') {
+        new PagefindUI({ element: "#search", showSubResults: true, showImages: false });
+      }
+    });
+  </script>
+</header>

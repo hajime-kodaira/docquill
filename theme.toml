@@ -1,0 +1,14 @@
+name = "docquill"
+license = "MIT"
+licenselink = "https://github.com/hajime-kodaira/docquill/blob/main/LICENSE"
+description = "AsciiDocで書くテックブログ向けHugoテーマ"
+homepage = "https://github.com/hajime-kodaira/docquill"
+demosite = "https://hajime-kodaira.github.io/docquill/"
+tags = ["blog", "asciidoc", "tech", "minimal"]
+features = ["asciidoc", "dark-mode", "pagefind", "rss"]
+min_version = "0.128.0"
+version = "2026.4.1"
+
+[author]
+  name = "hajime-kodaira"
+  homepage = "https://github.com/hajime-kodaira"

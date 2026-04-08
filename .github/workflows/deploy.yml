@@ -1,0 +1,87 @@
+name: Deploy & PR Preview
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+
+# =====================
+# セキュリティ: 最小権限の原則
+# トップレベルは最小限にし、ジョブ単位で必要な権限のみ付与
+# =====================
+permissions: {}
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    if: github.event.action != 'closed'
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5  # v4
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@e3b661c523413d13d642651a5ba5fc0d2b344c0d  # v3
+        with:
+          hugo-version: "0.147.0"
+          extended: true
+
+      - name: Install Asciidoctor
+        run: sudo gem install asciidoctor:2.0.23 rouge:4.5.1 --no-document
+
+      - name: Set base URL
+        id: base-url
+        run: |
+          if [ "${{ github.event_name }}" == "pull_request" ]; then
+            echo "url=https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-preview/pr-${{ github.event.number }}/" >> $GITHUB_OUTPUT
+          else
+            echo "url=https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Build
+        working-directory: ./exampleSite
+        run: hugo --minify --baseURL "${{ steps.base-url.outputs.url }}" --destination ../public
+
+      - name: Setup Pagefind
+        run: npx pagefind@1.3.0 --site public
+
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@e9c66a37f080288a11235e32cbe2dc5fb3a679cc  # v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+
+      - name: Deploy PR Preview
+        if: github.event_name == 'pull_request'
+        uses: rossjrw/pr-preview-action@ffa7509e91a3ec8dfc2e5536c4d5c1acdf7a6de9  # v1
+        with:
+          source-dir: ./public
+
+  cleanup:
+    if: github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5  # v4
+      - name: Cleanup PR Preview
+        uses: rossjrw/pr-preview-action@ffa7509e91a3ec8dfc2e5536c4d5c1acdf7a6de9  # v1
+        with:
+          source-dir: ./public
+          action: remove
