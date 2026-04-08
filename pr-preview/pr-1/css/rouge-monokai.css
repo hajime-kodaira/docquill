@@ -1,0 +1,214 @@
+.rouge table td { padding: 5px; }
+.rouge table pre { margin: 0; }
+.rouge .c, .rouge .ch, .rouge .cd, .rouge .cpf {
+  color: #75715e;
+  font-style: italic;
+}
+.rouge .cm {
+  color: #75715e;
+  font-style: italic;
+}
+.rouge .c1 {
+  color: #75715e;
+  font-style: italic;
+}
+.rouge .cp {
+  color: #75715e;
+  font-weight: bold;
+}
+.rouge .cs {
+  color: #75715e;
+  font-weight: bold;
+  font-style: italic;
+}
+.rouge .err {
+  color: #960050;
+  background-color: #1e0010;
+}
+.rouge .gi {
+  color: #ffffff;
+  background-color: #324932;
+}
+.rouge .gd {
+  color: #ffffff;
+  background-color: #493131;
+}
+.rouge .ge {
+  color: #000000;
+  font-style: italic;
+}
+.rouge .gr {
+  color: #aa0000;
+}
+.rouge .gt {
+  color: #aa0000;
+}
+.rouge .gh {
+  color: #999999;
+}
+.rouge .go {
+  color: #888888;
+}
+.rouge .gp {
+  color: #555555;
+}
+.rouge .gs {
+  font-weight: bold;
+}
+.rouge .gu {
+  color: #aaaaaa;
+}
+.rouge .k, .rouge .kv {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.rouge .kc {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.rouge .kd {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.rouge .kp {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.rouge .kr {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.rouge .kt {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.rouge .kn {
+  color: #f92672;
+  font-weight: bold;
+}
+.rouge .ow {
+  color: #f92672;
+  font-weight: bold;
+}
+.rouge .o {
+  color: #f92672;
+  font-weight: bold;
+}
+.rouge .mf {
+  color: #ae81ff;
+}
+.rouge .mh {
+  color: #ae81ff;
+}
+.rouge .il {
+  color: #ae81ff;
+}
+.rouge .mi {
+  color: #ae81ff;
+}
+.rouge .mo {
+  color: #ae81ff;
+}
+.rouge .m, .rouge .mb, .rouge .mx {
+  color: #ae81ff;
+}
+.rouge .se {
+  color: #ae81ff;
+}
+.rouge .sa {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.rouge .sb {
+  color: #e6db74;
+}
+.rouge .sc {
+  color: #e6db74;
+}
+.rouge .sd {
+  color: #e6db74;
+}
+.rouge .s2 {
+  color: #e6db74;
+}
+.rouge .sh {
+  color: #e6db74;
+}
+.rouge .si {
+  color: #e6db74;
+}
+.rouge .sx {
+  color: #e6db74;
+}
+.rouge .sr {
+  color: #e6db74;
+}
+.rouge .s1 {
+  color: #e6db74;
+}
+.rouge .ss {
+  color: #e6db74;
+}
+.rouge .s, .rouge .dl {
+  color: #e6db74;
+}
+.rouge .na {
+  color: #a6e22e;
+}
+.rouge .nc {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.rouge .nd {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.rouge .ne {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.rouge .nf, .rouge .fm {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.rouge .no {
+  color: #66d9ef;
+}
+.rouge .bp {
+  color: #f8f8f2;
+}
+.rouge .nb {
+  color: #f8f8f2;
+}
+.rouge .ni {
+  color: #f8f8f2;
+}
+.rouge .nn {
+  color: #f8f8f2;
+}
+.rouge .vc {
+  color: #f8f8f2;
+}
+.rouge .vg {
+  color: #f8f8f2;
+}
+.rouge .vi {
+  color: #f8f8f2;
+}
+.rouge .nv, .rouge .vm {
+  color: #f8f8f2;
+}
+.rouge .w {
+  color: #f8f8f2;
+}
+.rouge .nl {
+  color: #f8f8f2;
+  font-weight: bold;
+}
+.rouge .nt {
+  color: #f92672;
+}
+.rouge {
+  color: #f8f8f2;
+  background-color: #49483e;
+}
