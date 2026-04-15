@@ -10,7 +10,7 @@
         {{ end }}{{ end }}
         {{ with .Params.categories }}
           <span class="post-categories">
-            {{ range . }}<a class="category" href="{{ "/categories/" | absURL }}{{ . | urlize }}/">{{ . }}</a>{{ end }}
+            {{ range . }}<a class="category" href="{{ "categories/" | relURL }}{{ . | urlize }}/">{{ . }}</a>{{ end }}
           </span>
         {{ end }}
       </div>
@@ -30,7 +30,7 @@
     {{ with .Params.tags }}
       <footer class="post-footer">
         <div class="post-tags">
-          {{ range . }}<a class="tag" href="{{ "/tags/" | absURL }}{{ . | urlize }}/">#{{ . }}</a>{{ end }}
+          {{ range . }}<a class="tag" href="{{ "tags/" | relURL }}{{ . | urlize }}/">#{{ . }}</a>{{ end }}
         </div>
       </footer>
     {{ end }}

@@ -1,10 +1,10 @@
 <header class="site-header">
   <div class="container header-inner">
-    <a class="site-title" href="{{ "/" | absURL }}">{{ .Site.Title }}</a>
+    <a class="site-title" href="{{ "" | relURL }}">{{ .Site.Title }}</a>
     <nav class="site-nav">
-      <a href="{{ "/posts/" | absURL }}">Posts</a>
-      <a href="{{ "/tags/" | absURL }}">Tags</a>
-      <a href="{{ "/categories/" | absURL }}">Categories</a>
+      <a href="{{ "posts/" | relURL }}">Posts</a>
+      <a href="{{ "tags/" | relURL }}">Tags</a>
+      <a href="{{ "categories/" | relURL }}">Categories</a>
     </nav>
     <div id="search" class="site-search"></div>
   </div>
