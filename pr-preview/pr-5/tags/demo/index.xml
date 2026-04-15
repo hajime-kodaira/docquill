@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Demo on docquill example</title><link>https://hajime-kodaira.github.io/docquill/pr-preview/pr-5/tags/demo/</link><description>Recent content in Demo on docquill example</description><generator>Hugo</generator><language>ja</language><lastBuildDate>Wed, 15 Jan 2025 00:00:00 +0900</lastBuildDate><atom:link href="https://hajime-kodaira.github.io/docquill/pr-preview/pr-5/tags/demo/index.xml" rel="self" type="application/rss+xml"/><item><title>AsciiDoc機能デモ</title><link>https://hajime-kodaira.github.io/docquill/pr-preview/pr-5/posts/asciidoc-features/</link><pubDate>Wed, 15 Jan 2025 00:00:00 +0900</pubDate><guid>https://hajime-kodaira.github.io/docquill/pr-preview/pr-5/posts/asciidoc-features/</guid><description>&lt;div id="preamble">
+&lt;div class="sectionbody">
+&lt;div class="paragraph">
+&lt;p>docquillテーマがAsciidoctorの主要な出力要素にどう対応しているかを確認するためのデモ記事です。&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div class="sect1">
+&lt;h2 id="_admonitionの全種類">&lt;a class="anchor" href="#_admonitionの全種類">&lt;/a>1. Admonitionの全種類&lt;/h2>
+&lt;div class="sectionbody">
+&lt;div class="admonitionblock note">
+&lt;table>
+&lt;tbody>&lt;tr>
+&lt;td class="icon">
+&lt;div class="title">Note&lt;/div>
+&lt;/td>
+&lt;td class="content">
+ノートです。補足情報を表します。
+&lt;/td>
+&lt;/tr>
+&lt;/tbody>&lt;/table>
+&lt;/div>
+&lt;div class="admonitionblock tip">
+&lt;table>
+&lt;tbody>&lt;tr>
+&lt;td class="icon">
+&lt;div class="title">Tip&lt;/div>
+&lt;/td>
+&lt;td class="content">
+ヒントです。便利な使い方を示します。
+&lt;/td>
+&lt;/tr>
+&lt;/tbody>&lt;/table>
+&lt;/div>
+&lt;div class="admonitionblock important">
+&lt;table>
+&lt;tbody>&lt;tr>
+&lt;td class="icon">
+&lt;div class="title">Important&lt;/div>
+&lt;/td>
+&lt;td class="content">
+重要事項です。読者に強く伝えたい内容です。
+&lt;/td>
+&lt;/tr>
+&lt;/tbody>&lt;/table>
+&lt;/div>
+&lt;div class="admonitionblock warning">
+&lt;table>
+&lt;tbody>&lt;tr>
+&lt;td class="icon">
+&lt;div class="title">Warning&lt;/div>
+&lt;/td>
+&lt;td class="content">
+警告です。注意を喚起します。
+&lt;/td>
+&lt;/tr>
+&lt;/tbody>&lt;/table>
+&lt;/div>
+&lt;div class="admonitionblock caution">
+&lt;table>
+&lt;tbody>&lt;tr>
+&lt;td class="icon">
+&lt;div class="title">Caution&lt;/div>
+&lt;/td>
+&lt;td class="content">
+注意です。慎重な取り扱いが必要です。
+&lt;/td>
+&lt;/tr>
+&lt;/tbody>&lt;/table>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div class="sect1">
+&lt;h2 id="_引用ブロック">&lt;a class="anchor" href="#_引用ブロック">&lt;/a>2. 引用ブロック&lt;/h2>
+&lt;div class="sectionbody">
+&lt;div class="quoteblock">
+&lt;blockquote>
+&lt;div class="paragraph">
+&lt;p>Premature optimization is the root of all evil.&lt;/p>
+&lt;/div>
+&lt;/blockquote>
+&lt;div class="attribution">
+— Donald E. Knuth&lt;br/>
+&lt;cite>The Art of Computer Programming&lt;/cite>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div class="sect1">
+&lt;h2 id="_ソースコードブロック">&lt;a class="anchor" href="#_ソースコードブロック">&lt;/a>3. ソースコードブロック&lt;/h2>
+&lt;div class="sectionbody">
+&lt;div class="listingblock">
+&lt;div class="title">Pythonの例&lt;/div>
+&lt;div class="content">
+&lt;pre class="rouge highlight">&lt;code data-lang="python">&lt;span class="k">def&lt;/span> &lt;span class="nf">fibonacci&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">):&lt;/span>
+ &lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">b&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>
+ &lt;span class="k">for&lt;/span> &lt;span class="n">_&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="nf">range&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">):&lt;/span>
+ &lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">b&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">a&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">b&lt;/span>
+ &lt;span class="k">return&lt;/span> &lt;span class="n">a&lt;/span>&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;/div>
+&lt;div class="listingblock">
+&lt;div class="title">Bashの例&lt;/div>
+&lt;div class="content">
+&lt;pre class="rouge highlight">&lt;code data-lang="bash">&lt;span class="c">#!/bin/bash&lt;/span>
+&lt;span class="k">for &lt;/span>i &lt;span class="k">in&lt;/span> &lt;span class="o">{&lt;/span>1..5&lt;span class="o">}&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">do
+ &lt;/span>&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;iteration &lt;/span>&lt;span class="nv">$i&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;span class="k">done&lt;/span>&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div class="sect1">
+&lt;h2 id="_リスト">&lt;a class="anchor" href="#_リスト">&lt;/a>4. リスト&lt;/h2>
+&lt;div class="sectionbody">
+&lt;div class="sect2">
+&lt;h3 id="_箇条書き">&lt;a class="anchor" href="#_箇条書き">&lt;/a>4.1. 箇条書き&lt;/h3>
+&lt;div class="ulist">
+&lt;ul>
+&lt;li>
+&lt;p>レベル1の項目&lt;/p>
+&lt;div class="ulist">
+&lt;ul>
+&lt;li>
+&lt;p>レベル2の項目&lt;/p>
+&lt;div class="ulist">
+&lt;ul>
+&lt;li>
+&lt;p>レベル3の項目&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;/li>
+&lt;li>
+&lt;p>別の項目&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;/div>
+&lt;div class="sect2">
+&lt;h3 id="_番号付きリスト">&lt;a class="anchor" href="#_番号付きリスト">&lt;/a>4.2. 番号付きリスト&lt;/h3>
+&lt;div class="olist arabic">
+&lt;ol class="arabic">
+&lt;li>
+&lt;p>最初のステップ&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>二番目のステップ&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>三番目のステップ&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div class="sect1">
+&lt;h2 id="_インライン要素">&lt;a class="anchor" href="#_インライン要素">&lt;/a>5. インライン要素&lt;/h2>
+&lt;div class="sectionbody">
+&lt;div class="paragraph">
+&lt;p>これは &lt;code>インラインコード&lt;/code> の例です。
+&lt;strong>強調&lt;/strong> と &lt;em>斜体&lt;/em> も使えます。
+リンクは &lt;a href="https://gohugo.io">Hugo公式サイト&lt;/a> のように書きます。&lt;/p>
+&lt;/div></description></item></channel></rss>
