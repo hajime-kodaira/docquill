@@ -16,14 +16,14 @@ on:
 # =====================
 permissions: {}
 
-concurrency:
-  group: pages-${{ github.ref }}
-  cancel-in-progress: true
-
 jobs:
   build-and-deploy:
     if: github.event.action != 'closed'
     runs-on: ubuntu-latest
+
+    concurrency:
+      group: pages-${{ github.ref }}
+      cancel-in-progress: true
 
     permissions:
       contents: write
@@ -74,6 +74,9 @@ jobs:
   cleanup:
     if: github.event.action == 'closed'
     runs-on: ubuntu-latest
+    concurrency:
+      group: pr-preview-cleanup-${{ github.event.number }}
+      cancel-in-progress: false
     permissions:
       contents: write
       pull-requests: write
