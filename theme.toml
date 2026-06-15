@@ -7,7 +7,7 @@ demosite = "https://hajime-kodaira.github.io/docquill/"
 tags = ["blog", "asciidoc", "tech", "minimal"]
 features = ["asciidoc", "dark-mode", "pagefind", "rss"]
 min_version = "0.128.0"
-version = "2026.4.1"
+version = "2026.6.0"
 
 [author]
   name = "hajime-kodaira"
